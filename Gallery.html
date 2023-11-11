@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gallery Mandi C16</title>
+	    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"> 
+	    
+</head>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+   background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(50px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+  
+
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+   background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(50px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+     background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(50px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(50px);
+	backdrop-filter: blur(50px);
+	box-shadow: 0 25px 23px gray;
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+	z-index: 9;
+    
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+.contaner{
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	/*justify-content: center;
+	align-self: center;*/
+	
+	
+
+}
+.contaner div{
+	margin: 20px;
+	padding: 20px;
+	/*display: flex;
+	flex-wrap: wrap;*/
+}
+.d1{
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
+}
+.d2{
+	width: 50px;
+	height: 50px;
+	background-color: gold;
+}
+.d3{
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+}
+.d4{
+	width: 50px;
+	height: 50px;
+	background-color: green;
+}
+body {
+	/*font-family: Lato, sans-serif;
+	margin: 0;
+	padding: 1rem;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(20, 20, 20, 1);*/
+}
+
+img {
+	width: 100%;
+	display: block;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	transition: transform 1000ms;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 0.7rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	max-width: 100%;
+	width: 70rem;
+}
+
+figure {
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+figure::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200%;
+	height: 200%;
+	background: rgba(0, 0, 0, 0.5);
+	transform-origin: center;
+	opacity: 0;
+	transform: scale(2);
+	transition: opacity 300ms;
+}
+
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+	text-align: center;
+	padding: 1rem;
+	color: white;
+	font-size: 1.2rem;
+/*	z-index: 1;*/
+	opacity: 0;
+	transition: opacity 600ms, transform 600ms;
+}
+
+a:is(:hover, :focus) figure::after {
+	opacity: 1;
+}
+
+a:is(:hover, :focus) figcaption {
+	opacity: 1;
+	transition: opacity 600ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	figcaption {
+		transform: translate3d(0, 2rem, 0);
+	}
+	
+	figure::after {
+		border-radius: 50%;
+		opacity: 1;
+		transform: scale(0);
+		transition: transform 900ms;
+	}
+	
+	a:is(:hover, :focus) figure::after {
+		transform: scale(2.5);
+	}
+
+	a:is(:hover, :focus) figcaption {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+		transition: opacity 600ms 400ms, transform 600ms 400ms;
+	}
+
+	a:is(:hover, :focus) img {
+		transform: scale(1.2);
+	}
+}
+.footer{
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding-top: 7px;
+	font-size: 24;
+	font-family: vardana,sans-serif;
+	 background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+}
+</style>
+<body background="background/bg4.png">
+
+
+
+	 <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+   <pre>Mandi C16   🍌🥭🍎</pre>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="index.html" style="color:black; font-family:sans-serif;">Home</a>
+    <a href="Fruits Benefits.html" style="color:black; font-family:sans-serif;">Benefits</a>
+    
+    <a href="Gallery.html" style="color:black; font-family:sans-serif;">Gallery</a>
+    <a href="Contact.html" style="color:black; font-family:sans-serif;">Contact</a>
+  </div>
+</div>
+
+<!-- <div class="contaner" align="center">
+	<div class="d1"></div>
+	<div class="d2"></div>
+	<div class="d3"></div>
+	<div class="d4"></div>
+</div> -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<ul>
+	<li>
+		<a href="">
+			<figure>
+				<img src='fruitpic/f8.jpg' alt='Banana'>
+				<figcaption>Banana</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='fruitpic/f2.jpg' alt='Fruits'>
+				<figcaption>Fruits</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='fruitpic/f3.jpg' alt='Apple'>
+				<figcaption>Apple</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='fruitpic/f4.jpg' alt='Stobeery'>
+				<figcaption>Stobeery</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='fruitpic/f5.jpg' alt='Graphs'>
+				<figcaption>Graphs</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='fruitpic/f6.jpg' alt='Apple'>
+				<figcaption>Apple</figcaption>
+			</figure>
+		</a>
+	</li>
+
+
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/pic.jpg' alt='Arish Hussain'>
+				<figcaption>Arish Hussain</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile1.jpg' alt='Iftekhar Hussain'>
+				<figcaption>Iftekhar Hussain</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile3.jpg' alt='Porus'>
+				<figcaption>Porus</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile4.jpg' alt='Ashkar Hussain'>
+				<figcaption>Ashkar Hussain</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile5.jpg' alt='Faheem Khan'>
+				<figcaption>Faheem Khan</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile6.jpg' alt='Fazil Khan'>
+				<figcaption>Fazil Khan</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile7.jpg' alt='Faizan Khan'>
+				<figcaption>Faizan Khan</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile8.jpg' alt='Subhan Khan'>
+				<figcaption>Subhan Khan</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile9.jpg' alt='Jamshad Khan'>
+				<figcaption>Jamshad Khan</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile10.jpg' alt='Raja'>
+				<figcaption>Raja</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='profilefolder/profile.jpg' alt='Arish Hussain'>
+				<figcaption>Arish Hussain</figcaption>
+			</figure>
+		</a>
+	</li>
+	<li>
+		<a href="">
+			<figure>
+				<img src='background/bg.jpg' alt='Arish Hussain'>
+				<figcaption>wallpaper</figcaption>
+			</figure>
+		</a>
+	</li>
+
+
+
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+	<footer>
+		Design BY Arish Hussain &#169; 2007<br><br>
+		ARISH KA CODE &#8482;
+	</footer>
+</div>
+</body>
+</html>

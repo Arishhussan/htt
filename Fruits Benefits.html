@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fruits Benefits</title>
+	    <link rel="shortcut icon" href="favicon.png" type="image/x-icon"> 
+	    
+</head>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
+		.nav {
+  height: 50px;
+  width: 100%;
+  background-color: darkgrey;
+  position: relative;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+   background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+  
+
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  font-family: sans-serif;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+/*  background-color: rgba(0, 0, 0, 0.3);*/
+/*   background-color: rgba(255, 255, 255, 0.06);*/
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+/*    background-color: rgba(0, 0, 0, 0.3);*/
+/*     background-color: rgba(255, 255, 255, 0.06);*/
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 225, 0.06);
+	border-radius: 7px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid black;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: lightgray;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+   /* background-color: rgba(255, 255, 255, 0.06);
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+	box-shadow: 0 25px 23px rgba(0, 0, 0, 0.15);
+	border: 1.5px solid rgba(255, 255, 255, 0.06);
+	border-radius: 7px;*/
+    
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+	.contaner{
+		width: 100%;
+		height: auto;
+		background-color:white;
+		box-shadow: 0px 0px 20px 0px #ddd8d8;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+
+	}
+	.contaner div{
+		height: auto;
+		width: 300px;
+		margin: 20px;
+		padding: 20px;
+		border-radius: 27px;
+		background-color: white;text-align: center;
+		box-shadow: 0px 0px 20px 0px #ddd8d8;
+		font-size: 16px;
+		font-family: sans-serif;
+		opacity: 0.47;
+				transition: 1.47s;
+
+	}
+	.contaner div:hover{ 
+		margin: auto;
+		height: auto;
+		width: 300px;
+		font-size: 17px;
+		opacity: 1;
+		color: black;
+		font-family: vardana,sans-serif;
+		transition-duration: 1.47s;
+
+	}
+	.i1{
+width: 340px;
+height: 340px;
+background-color: white;
+border-radius: 27px;
+box-shadow: 0px 0px 20px 0px #ddd8d8;
+
+	}
+	.i2{
+width: 340px;
+height: 340px;
+  
+	}
+	.i3{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i4{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i5{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i6{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i7{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i8{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i9{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i10{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i11{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i12{
+width: 340px;
+height: 340px; 
+ 
+	}.i13{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i14{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.i15{
+width: 340px;
+height: 340px; 
+ 
+	}
+	.footer{
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding-top: 7px;
+	font-size: 24;
+	font-family: vardana,sans-serif;
+	border-radius: 7px;
+		background-color: white;text-align: center;
+		box-shadow: 0px 0px 20px 7px #ddd8d8;
+		font-size: 20px;
+/*		font-family: sans-serif;*/
+		color: black;
+}
+</style>
+<body>
+	<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+   <pre>Mandi C16   🍌🥭🍎</pre>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="index.html" style="color:black; font-family:sans-serif;">Home</a>
+    <a href="Fruits Benefits.html" style="color:black; font-family:sans-serif;">Benefits</a>
+    
+    <a href="Gallery.html" style="color:black; font-family:sans-serif;">Gallery</a>
+    <a href="Contact.html" style="color:black; font-family:sans-serif;">Contact</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div class="contaner">
+		<div class="i1"><h4 align="center"><h4> Health Benefits of Mango</h4><br>
+Packed with nutrients. ... <br>
+Low in calories. ... <br>
+May help prevent diabetes. ... <br>
+High in healthy plant compounds. ... <br>
+Contains immune-boosting nutrients. ... <br>
+Supports heart health. ... <br>
+May improve digestive health. ... <br>
+May support eye health.</div>
+
+
+
+
+
+		<div class="i2"><h4 align="center"><br>Benefit of Pomegranate:</h4><br>
+It may act as an antioxidant. <br>
+It may be an anti-proliferative <br>(prevents the spread of cancer cells in the body)<br>
+It may have anti-inflammatory potential. <br>
+It may act as an antimicrobial agent. <br>
+It may be anti-oestrogenic <br>(counters the effect of oestrogen female hormone in the body)</div>
+
+
+
+
+
+		<div class="i3"><h4 align="center"><br>Health benefits of banana</h4><br>
+May improve digestion: <br>Banana is rich in soluble and insoluble fibres that play an essential role in digestive health. ... <br>
+Helps to improve heart health: ... <br>
+Helps to build lean muscles: ... <br>
+Supports bone health: ... <br>
+Helps muscles to recover after exercise: ... <br>
+Helps to reduce bloating:</div>
+
+
+
+
+		<div class="i4"><h4 align="center"><br> Health Benefits of Papaya </h4><br> Yellow-Orange Fruit. <br>
+Protects The Heart. <br>
+Gives Glowing Skin. <br>
+Boosts Digestive Health. <br>
+Great Food For Diabetics. <br>
+Loaded with Anti-ageing benefits. <br>
+Reduces Cholesterol Levels. <br>
+Lowers The Risk of Cancer.</div>
+	
+
+
+
+
+<div class="i5"><h4 align="center"><br>Grapes contain many <br></h4> <br>important vitamins  <br>and minerals, including copper and <br>vitamins B and K. <br>
+May aid heart health. ... <br>
+High in antioxidants. ... <br>
+May have anticancer effects. ... <br>
+May protect against diabetes  <br>and lower blood sugar levels. ... <br>
+May benefit eye health. ... <br>
+May improve memory, attention, and mood. ... <br>
+May support bone health.</div>
+
+
+
+
+<div class="i6"><h4 align="center"><br>Protects The Heart.</h4> <br> Papaya is loaded with fiber, <br> potassium, and vitamin content <br> that keeps heart diseases at bay. ... <br>
+Gives Glowing Skin. ... <br>
+Boosts Digestive Health. ... <br>
+Great Food For Diabetics. ... <br>
+Loaded with Anti-ageing benefits. ... <br>
+Reduces Cholesterol Levels. ... <br>
+Lowers The Risk of Cancer. ... <br>
+Controls Irregular Periods.
+</div>
+
+
+
+
+
+<div class="i7"><h4 align="center"><br>Packed with nutrients. ... </h4> <br>
+Low in calories. ... <br>
+May help prevent diabetes. ... <br>
+High in healthy plant compounds. ... <br>
+Contains immune-boosting nutrients. ... <br>
+Supports heart health. ... <br>
+May improve digestive health. ... <br>
+May support eye health
+</div>
+
+
+
+
+
+
+
+<div class="i8"><h4 align="center"><br>improve blood sugar levels. </h4> <br>
+prevent constipation. <br>
+improve gut, kidney, and heart health. <br>
+aid in weight loss. <br>
+keep you feeling full. <br>
+support post-exercise recovery.
+</div>
+
+
+
+
+
+<div class="i9"><h4 align="center"><br>Fruits Slaad Benefit. </h4> <br>
+With the right quantity and type 
+ <br>of fruits, a fruit salad <br>
+ can work wonders for you, for <br>
+  it will  provide you with  <br>
+  a power-packed dose of fibre,  <br>
+  vitamins  and antioxidants. <br>
+   At the same time, you will <br>
+   also get a wide  range <br>
+   of health benefits, right <br>
+   from lower blood pressure <br>
+   levels to weight management <br>
+</div>
+
+
+
+
+
+<div class="i10"><h4 align="center"><br>Orange Benefit</h4>  <br>The fiber in oranges <br>
+	can keep blood sugar levels in <br>
+	 check and reduce high cholesterol <br>
+	  to prevent cardiovascular disease <br>
+	  . Oranges contain approximately 55 <br>
+	  milligrams of calcium, or 6% <br>
+	  of your daily requirement. <br>
+	  This nutrient is important <br>
+	   for building strong bones <br>
+	    and maintaining bone health. <br>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="i11"><h4 align="center"><br>Best time to eat watermelon
+ </h4> <br>
+The Ayurveda expert suggests <br>
+ you to have it in morning  <br>
+ between 10 am to 12 pm as <br>
+  breakfast or between breakfast <br>
+   and lunch. Dr Bhavsar says  <br>
+   one can even have it as an  <br>
+   evening snack post lunch  <br>
+   before 5 pm. She cautions <br>
+    against having watermelon  <br>
+    at night or with meals. <br>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="i12"><h4 align="center"><br>Is dates good for skin?</h4> <br>
+
+Dates are rich in nutrients <br>
+ like vitamins, energy,  <br>
+ minerals, sugar, fibre, <br>
+  iron, potassium, magnesium <br>
+   and zinc that provide  <br>
+   numerous benefits to your <br>
+    body and skin. It also  <br>
+    helps us fight against <br>
+     early ageing and make <br>
+      us look younger. By  <br>
+      eating two dates every <br>
+       day, you can see results <br>
+         in smoother and fairer skin. <br>
+
+
+
+
+</div>
+
+
+
+
+
+<div class="i13"><h4 align="center"><br>Iron: Guava contains </h4> <br>
+Iron: Guava contains  <br>
+a remarkable 2.17 times <br>
+ more iron than apples, <br>
+  making it an excellent  <br>
+  choice for combating  <br>
+  iron-deficiency anemia  <br>
+  and supporting healthy <br>
+   red blood cells. 2. Magnesium: <br>
+    Guava excels with 4.4 times <br>
+     more magnesium, a vital <br>
+      mineral for nerve function, <br>
+       muscle contraction, <br>
+        and maintaining strong bones. <br>
+</div>
+
+
+
+
+
+
+
+<div class="i14"><h4 align="center"><br>Benefits Jamun </h4> <br>
+With its high vitamin C content <br>
+jamun can give your immune system <br>
+ a significant boost. Vitamin C  <br>
+ acts as an antioxidant and  <br>
+ supports the production of white <br>
+  blood cells, enhancing the body's <br>
+   ability to fight infections  <br>
+   and diseases. The presence of  <br>
+   potassium in jamun makes it good <br>
+    for cardiovascular health <br>
+
+
+</div>
+
+
+
+
+
+
+<div class="i15"><h4 align="center"><br>Benefits Lechi </h4> <br>
+It is rich in iron, copper,  <br>
+manganese, phosphorus, and  <br>
+magnesium, which improve bone <br>
+ and heart health. Lychees  <br>
+ are a rich source of numerous  <br>
+ antioxidant-plant compounds,  <br>
+ including epicatechin and rutin, <br>
+  which help protect against  <br>
+  oxidative stress, chronic  <br>
+  diseases, cataract, diabetes, <br>
+   heart diseases, and cancers. <br>
+</div>
+	</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+	<footer>
+		Design BY Arish Hussain &#169; 2007<br><br>
+		ARISH KA CODE &#8482;
+	</footer>
+</div>
+
+	 
+</body>
+</html>
